@@ -1,7 +1,12 @@
 # Stale Calls
-See calls that are identified as being stale or orphaned are candidates for ending/purging. Purged stale calls are logged to the database, and the purged records can be logged on the Stale Call Logs page. On the Stale Call Logs page you can see who purged the records and there is a link to the CDR details page.
+Calls that are identified as being stale or orphaned are candidates for ending/purging. Purged stale calls are logged to the database, and the purged records can be logged on the Stale Call Logs page. On the Stale Call Logs page you can see who purged the records and there is a link to the CDR details page.
+
+Stale Calls page
+<img width="1443" height="600" alt="2026-07-22_11-00" src="https://github.com/user-attachments/assets/729238c7-6a10-4721-b169-0ad119a193a1" />
 
 
+Stale Call Logs page
+<img width="1443" height="381" alt="2026-07-22_11-27" src="https://github.com/user-attachments/assets/0b000ba6-47a0-4365-a67d-bfb69e3be4b2" />
 
 
 ## Installation
@@ -49,23 +54,12 @@ The following permission is registered automatically during the App Defaults ste
 |---|---|
 | `stale_call_log_view` | superadmin, admin |
 | `stale_call_purge` | superadmin, admin |
-| `call_flow_map_view` | superadmin, admin |
+| `stale_call_view ` | superadmin, admin |
  	 	
 
-Access can be adjusted per group in **Advanced → Group Manager**.
+## Default Settings
 
-
-## Usage
-
-1. Navigate to **Reports → Call Flow Diagram**
-2. Select a **Starting Type** from the dropdown (e.g. Inbound Routes)
-3. Select the specific **Destination** you want to trace
-4. Click **Generate Diagram**
-
-Once the diagram renders:
-
-- **Drag** any node to reposition it
-- **Scroll / pinch** to zoom in and out
-- **Double-click** a node to open its edit page in a new tab
-- Use the **Fit View** button to re-center the diagram
-- Use the **Download PNG** button to export the diagram as an image
+The following default settings variable(s) are registered automatically during the App Defaults step:
+| Stale Calls section | Default Value |
+|---|---|
+| `minimum_age_minutes` | 10 minutes |
